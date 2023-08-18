@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/logo.jpg">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>IUB ADMISIONES</title>
+</head>
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: rgb(171, 206, 207)">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../Principal.html">
+                <img width="150px" src="../img/logo1.png" />
+            </a>
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Navegación de palanca">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item mx-3">
+                        <a class="nav-link fw-bold" href="../Principal.html">Inicio</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link fw-bold" href="Contactenos.html">contactenos</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link fw-bold" href="Servicios.html">servicios</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="fw-bold btn btn-outline-dark" class="btnlogOut" onclick="logout()"
+                            href="../Principal.html">Cerrar sesion</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="fw-bold btn btn-outline-dark" class="btnlogOut" href="view admin.html">volver</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<body>
+
+    <main class="pt-5">
+        <div class="">
+            <div class="container-fluid px-4 pt-5">
+                <h3 class="mt-3">Gestion de usuario</h3>
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <button class="nav-link  btn btn-success" id="nav-listado-tab" data-bs-toggle="tab"
+                        data-bs-target="#nav-listado" type="button" role="tab" aria-controls="nav-listado"
+                        aria-selected="false" onclick="mostrar()">Listado</button>
+                    <button class="nav-link  btn btn-success" id="nav-nuevo-tab" data-bs-toggle="tab"
+                        data-bs-target="#nav-nuevo" type="button" role="tab" aria-controls="nav-nuevo"
+                        aria-selected="true">Registrar</button>
+
+                </div>
+                </nav>
+                <div class="tab-pane fade" id="nav-listado" role="tabpanel" aria-labelledby="nav-listado-tab"
+                    style="width: 1200px;">
+                    <!--- TAB LISTADO--->
+                    <div class="container">
+                        <div class="table-responsive pt-5">
+
+                            <table id="tablaestudiante" class=" table table-striped " style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th><b>Nombre</b></th>
+                                        <th><b>Id</b> </th>
+                                        <th><b>Correo</b></th>
+                                        <th><b>Carrera</b></th>
+                                        <th><b>Cuatrimestre</b></th>
+                                    </tr>
+                                </thead>
+                                <tbody id="datos_tabla">
+
+                                </tbody>
+
+                            </table>
+                        </div>
+                    </div>
+
+                    <!--FIN TAB LISTADO--->
+                </div>
+                <div class="tab-pane fade  active" id="nav-nuevo" role="tabpanel" aria-labelledby="nav-nuevo-tab">
+                    <!--TAB NUEVO--->
+                    <div class="card border-success mb-3 pt-5" style="margin-top: -100px;">
+                        <div class="card-header" style="margin-top: -47px;"><b>Registrar Estudiante</b></div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 ">
+                                    <div class="mb-2">
+                                        <label for="txtnombre" class="form-label"><b>Nombre</b></label>
+                                        <input type="text" class="form-control" id="txtnombre" required>
+                                    </div>
+                                    <div class="mb-2">
+                                        <label for="txtid" class="form-label"><b>Id</b></label>
+                                        <input type="text" class="form-control" id="txtid" required>
+                                    </div>
+                                    <div class="mb-2">
+                                        <label for="correo" class="form-label"><b>Correo</b></label>
+                                        <input type="email" class="form-control" id="txtcorreo" required>
+                                    </div>
+                                    <div class="row">
+                                        <form id="mio">
+                                            <label for="txtcarrera" class="form-label"><b>Carrera</b></label>
+                                            <select name="select" id="txtcarrera" class="form-control"
+                                                aria-placeholder="algo">
+                                                <div class="mb-2">
+                                                    <label>
+                                                        <option selected>sistemas</option>
+                                                        <option selected>diseño grafico</option>
+                                                        <option selected>mecatronica</option>
+                                                        <option selected>industrial</option>
+                                                        <option selected>Seleccione una carrera </option>
+                                                    </label>
+                                            </select>
+                                    </div>
+                                    <div class="mb-2">
+                                        <label for="txtcuatrimestre" class="form-label"><b>Cuatrimestre</b></label>
+                                        <input type="number" class="form-control" id="txtcuatrimestre" required>
+                                    </div>
+                                </div>
+                                </form>
+                                <div class="mb-2">
+                                    <button type="button" class="btn btn-success"
+                                        onclick="agregarestudiante()">Agregar</button>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 ">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </main>
+
+</body>
+
+
+<script src="../js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+<script src="../Js/procesocontacto.js"></script>
+
+<link rel="stylesheet" href="
+    text/css" href="../TABLA/datatables/datatables.min.css">
+<link rel="stylesheet" href="text/css" href="../TABLA/datatables/DataTables-1.13.6/css/dataTables.bootstrap4.min.css">
+<script type="text/javascript" src="../TABLA/datatables/datatables.min.js"></script>
+<script type="text/javascript" src="../Js/main.js"></script>
+<!--AXIOS -->
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</html>

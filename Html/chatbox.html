@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IUB CHAT</title>
+    <!-- Referencia a Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/chat.css">
+    <link rel="icon" href="../img/logo.jpg">
+</head>
+<style>
+    #chat-container {
+        height: 300px;
+        overflow-y: scroll;
+    }
+</style>
+
+<body onload="acceso()">
+    <div class="container">
+        <h1 class="mt-5">Chatbot de Admisión</h1>
+        <div class="card mt-4">
+            <div class="card-body chatbox" id="chatbox" class="chat-container">
+                <div id="chatlog">
+                    <p>Aqui te dejo unas preguntas freccuentes, coloca el numero para tener respuesta:
+                        <li>1.¿Cuáles son los requisitos de admisión?</li>
+                        <li>2.¿Cuál es la fecha límite para solicitar admisión?</li>
+                        <li>3.¿Qué programas de estudio ofrecen?</li>
+                        <li>4.¿Cuándo comienzan las clases?</li>
+                        <li>contraseña wifi</li>
+                    </p>
+                </div>
+                <input type="text" id="userInput" class="form-control" placeholder="Escribe tu pregunta">
+                <div class="text-right mt-2">
+                    <button class="btn btn-primary" onclick="sendMessage()">Enviar</button>
+                    <button type="button" onclick="logout()" class="fw-bold btn btn-outline-dark"
+                        data-bs-dismiss="modal">Cerrar
+                        Sesion</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<!-- Agregar los scripts de Bootstrap y jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="../Js/chatbot.js"></script>
+<script src="../Js/asistencia.js"></script>
+
+</html>

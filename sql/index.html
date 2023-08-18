@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Ejemplo</title>
+        <link rel="stylesheet" href="css/bootstrap.css">
+    </head>
+
+    <body onload="consultar_total()">
+        
+         <div >
+           <div>
+                <main>
+                    <div class="container-fluid px-4">
+                        <h3 class="mt-3">CONTACTOS</h3>
+                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                            <button class="nav-link  btn btn-success" id="nav-estadisticas-tab" data-bs-toggle="tab" data-bs-target="#nav-estadisticas" type="button" role="tab" aria-controls="nav-estadisticas" aria-selected="false">Estadisticas</button>
+                            <button class="nav-link  btn btn-success" id="nav-listado-tab" data-bs-toggle="tab" data-bs-target="#nav-listado" type="button" role="tab" aria-controls="nav-listado" aria-selected="false">Listado</button>
+                            <button class="nav-link  btn btn-success" id="nav-nuevo-tab" data-bs-toggle="tab" data-bs-target="#nav-nuevo" type="button" role="tab" aria-controls="nav-nuevo" aria-selected="true">Nuevo</button>
+     
+                        </div>
+                      </nav>
+                      <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade  " id="nav-estadisticas" role="tabpanel" aria-labelledby="nav-estadisticas-tab">
+                            <div class="card border-success mb-3" >
+                             <div class="card-body ">
+                                   <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="mb-2">
+                                                <h4><b>Cliente registrados</b></h4>
+                                                <div id="num_contactos"></div>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="mb-2">
+                                                <h4><b>Cliente</b></h4>
+                                                <div id=""></div>
+                                            </div>
+                                            
+                                        </div>
+                                   </div>
+                                </div>
+                        </div>
+                        </div>
+                        <div class="tab-pane fade" id="nav-listado" role="tabpanel" aria-labelledby="nav-listado-tab">
+                            <!--- TAB LISTADO--->
+                            <div class="container">
+                                <div class="table-responsive">
+                                    <table id="tablaestudiante" class=" table table-striped " style="width:100%">
+                                        <thead>
+                                            <tr>
+                                                <th><b>Nombre</b></th>
+                                                <th><b>Id</b> </th>
+                                                <th><b>Correo</b></th>
+                                                <th><b>Cedula</b></th>
+                                                <th><b>Carrera</b></th>
+                                                <th><b>Cuatrimestre</b></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        </tbody>
+                                        <button ></button>
+                                   </table>
+                            </div>
+                        </div>
+
+                             <!--FIN TAB LISTADO--->
+                        </div>
+                        <div class="tab-pane fade  active" id="nav-nuevo" role="tabpanel" aria-labelledby="nav-nuevo-tab">
+                        <!--TAB NUEVO--->
+                        <div class="card border-success mb-3" >
+                            <div class="card-header"><b>Nuevo cliente</b></div>
+                            <div class="card-body ">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 ">
+                                        
+            
+                                        <div class="mb-2">
+                                            <label for="txtnombre" class="form-label"><b>Id</b></label>
+                                            <input type="text" class="form-control" id="txtid" required>
+                                        </div>
+                                        <div class="mb-2">
+                                            <label for="txtnombre" class="form-label"><b>Nombre</b></label>
+                                            <input type="text" class="form-control" id="txtnombre" required>
+                                        </div>
+                                        <div class="mb-2">
+                                            <label for="txtnombre" class="form-label"><b>Apellido</b></label>
+                                            <input type="text" class="form-control" id="txtapellido" required>
+                                        </div>
+                                        <div class="mb-2">
+                                            <label for="txtnombre" class="form-label"><b>Cedula</b></label>
+                                            <input type="text" class="form-control" id="txtcedula" required>
+                                        <div class="mb-2">
+                                            <label for="txttelefono" class="form-label"><b>Telefono</b></label>
+                                            <input type="text" class="form-control" id="txttelefono" required>                                 
+                                        </div>
+                                        </div>
+                                        <div class="mb-2">
+                                            <label for="txtemail" class="form-label"><b>Dirección</b></label>
+                                            <input type="text" class="form-control" id="txtdireccion" required>
+                                        </div>                                   
+                                    
+
+                                    <div class="mb-2">
+                                        <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cancelar</button>
+                                        <button type="button" class="btn btn-success" onclick="agregarcliente()">Agregar</button>
+                                    </div>
+                                </div>
+                                    
+                                   <div class="col-lg-6 col-md-6 ">
+                                   
+                                        
+                                   </div>
+                                </div>
+                            </div>
+                            </div>
+                       </div>   
+                                           
+                       
+                      </div>               
+                </main>
+                <footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid px-4">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Copyright &copy; Your Website 2022</div>
+                            <div>
+                                <a href="#">Privacy Policy</a>
+                                &middot;
+                                <a href="#">Terms &amp; Conditions</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+
+
+          <!-------------------------------MODAL DE EDITAR ------------------------------------->
+
+    <div class="modal fade" id="exampleModalEditarMina" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-success">
+                    <h5 class="modal-title" id="exampleModalLabel"><b>Editar mina</b> </h5>
+                </div>
+                <div class="modal-body bg-light">
+                    <div class="row">
+
+                        <div class="col-lg-6 col-md-6 ">
+                            <div class="mb-2">
+                                <label for="txtidmina_e" class="form-label"><b>Id</b></label>
+                                <input type="text" class="form-control" id="txtidmina_e" readonly>
+                            </div>
+                     </div>
+                        
+                       
+                   
+                    <div class="col-lg-6 col-md-6 ">
+
+                        <div class="mb-2">
+                            <label for="txtnombremina_e" class="form-label"><b>Nombre mina</b></label>
+                            <input type="text" class="form-control" id="txtnombremina_e" readonly>
+                        </div>
+                        
+                        <div class="mb-2">
+                            <label for="txtclasificacion_e" class="form-label"><b>Clasificacion</b></label>
+                            <select name="" id="txtclasificacion_e" class="form-control" style="border:2px solid red">
+                                <option   value=" " selected></option>
+                                <option   value="wake up" selected>wake up</option>
+                                <option  value="Compliance">Compliance</option>
+                                <option  value="Embracing sustainability">Embracing sustainability</option>
+                                <option value="Sustainability leader">Sustainability leader</option>
+                            </select>
+                        </div>
+                      
+                   </div>
+                    
+                </div>
+                <div class="modal-footer bg-light">
+                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-success " onclick="actualizarmina()" >Editar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-------------------------------------------------------------------------------->
+
+
+    <!-------------------------------MODAL DE EDITAR ------------------------------------->
+
+    <div class="modal fade" id="exampleModalBajar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-success">
+                    <h5 class="modal-title" id="exampleModalLabel"><b>Bajar usuario</b> </h5>
+                </div>
+                <div class="modal-body bg-light">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 ">
+                            <div class="mb-2">
+                                <p><b>¿Esta seguro que se desea dar de baja al usuario?</b></p> <br>
+                                <label for="txtusuario_b" class="form-label"><b>Usuario</b></label>
+                                <input type="text" class="form-control" id="txtusuario_b" readonly>
+                            </div>
+                                                        
+                        </div>
+                        <div class="col-lg-6 col-md-6 text-center  ">
+                           
+                        
+                       </div>
+                    </div>
+                </div>
+                <div class="modal-footer bg-light">
+                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-success" onclick="bajarusuario()" >Eliminar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <!--jS -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="js/procesocontacto.js"></script>
+    <!--AXIOS -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    </body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servicios</title>
+  <link href="../css/bootstrap.css" rel="stylesheet" />
+  <link href="../css/bootstrap.css.map" rel="stylesheet" />
+  <link href="../css/bootstrap.min.css" rel="stylesheet" />
+  <link href="../css/bootstrap.min.css.map" rel="stylesheet" />
+  <script src="../js/bootstrap.js"></script>
+  <script src="../js/bootstrap.js.map"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/bootstrap.min.js.map"></script>
+  <script src="../Js/sesion.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <!--AXIOS -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <link rel="icon" href="../img/logo.jpg">
+</head>
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgb(45, 166, 223)">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="../Principal.html">
+        <img width="150px" src="../img/logo1.png" />
+      </a>
+      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Navegación de palanca">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item mx-3">
+            <a class="nav-link fw-bold active" href="../Principal.html">Inicio</a>
+          </li>
+          <li class="nav-item mx-3">
+            <a class="nav-link fw-bold" href="Contactenos.html">contactenos</a>
+          </li>
+          <li class="nav-item mx-3">
+            <a class="nav-link fw-bold" href="servicios.html">servicios</a>
+          </li>
+          <li class="nav-item mx-3">
+            <button class="fw-bold btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Iniciar
+              Sesion</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<body>
+  <section>
+
+    <figure class="text-center mt-5">
+      <blockquote class="blockquote fs-1 fw-bold">
+        <p>Servicios</p>
+      </blockquote>
+      <figcaption class="blockquote-footer fs-2">
+        <p>Lista de servicios</p>
+      </figcaption>
+    </figure>
+
+    <div class="row row-cols-2 row-cols-md-4 g-3 my-5 mx-5 text-center">
+      <div class="col">
+        <div class="card card-img-top py-3">
+          <a target="_blank" href="http://portal.itsa.edu.co:8080/itsa/index.htm">
+            <img width="100px" src="../img/ingreso-academusoft-icon.png" alt="Lo sentimos, no se encontro la imagen">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">Academusoft</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card card-img-top py-3">
+          <a target="_blank" href="https://aulavirtual.itsa.edu.co/login/index.php">
+            <img width="100px" src="../img/aula.png" alt="Lo sentimos, no se encontro la imagen">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">Aula virtual</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card card-img-top py-3">
+          <a target="_blank" href="https://siaaa.itsa.edu.co:8443/Acreditacion/sistema/_inscripcion_modulos.jsp">
+            <img width="100px" src="../img/matricula-icon.png" alt="Lo sentimos, no se encontro la imagen">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">Inscripción modulo</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card card-img-top py-3">
+          <a target="_blank" href="https://siaaa.itsa.edu.co:8443/Acreditacion/sistema/_inscripcion_modulos.jsp">
+            <img width="100px" src="../img/ingles-icon.png" alt="Lo sentimos, no se encontro la imagen">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">Inscripción de ingles</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <form id=myform>
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content" id="login-form">
+            <div class="modal-header bg-primary">
+              <h5 class="modal-title">Inicio De Sesion</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+              <div class="mb-3">
+                <div class="mb-3">
+                  <label for="txtcorreo" class="form-label">Correo</label>
+                  <input type="text" class="form-control" id="txtcorreo" placeholder="Ingrese Correo" required>
+                </div>
+                <label for="txtcontraseña" class="form-label">ID</label>
+                <input type="password" class="form-control" id="txtcontraseña" placeholder="Ingrese Contraseña"
+                  required>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="fw-bold btn btn-outline-dark" onclick="login()">Enviar</button>
+              <button type="button" class="fw-bold btn btn-outline-dark" data-bs-dismiss="modal">volver</button>
+            </div>
+          </div>
+        </div>
+    </form>
+
+
+  </section>
+
+  <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 mt-5 mb-0 border-top bg-dark ">
+    <!-- start -->
+    <div class="col mb-3 ms-3">
+      <a href="/" class="d-flex align-items-center mb-3 ">
+        <svg class="bi me-2" width="40" height="32">
+          <use xlink:href="#bootstrap"></use>
+        </svg>
+      </a>
+      <p class="text-light">copyright©/IUB</p>
+    </div>
+    <div class="col mb-3">
+    </div>
+    <!-- end -->
+    <!-- start cradores -->
+    <div class="col mb-3 text-light ">
+      <h5>REALIZADO POR</h5>
+      <ul class="nav flex-column ">
+        <li class="nav-item mb-2"><a class="nav-link p-0 text-light">Moises Daniel Diaz Garcia</a></li>
+        <li class="nav-item mb-2"><a class="nav-link p-0 text-light">Samuel Peñaloza</a></li>
+        <li class="nav-item mb-2"><a class="nav-link p-0 text-light">Camilo Andres Sanchez Monsalvo</a></li>
+      </ul>
+    </div>
+    <!-- end creadores -->
+    <!-- start contactos -->
+    <div class="col mb-3 text-light">
+      <h5>CONTACTOS</h5>
+      <ul class="nav flex-column">
+        <li class="nav-item mb-2"><a class="nav-link p-0 text-light">+57 3022843231</a></li>
+        <li class="nav-item mb-2"><a class="nav-link p-0 text-light">+57 3177598755</a></li>
+        <li class="nav-item mb-2"><a class="nav-link p-0 text-light">mddiaz@unibarranquilla.edu.co</a></li>
+        <li class="nav-item mb-2"><a class="nav-link p-0 text-light">camiloasanchez@unibarranquilla.edu.co</a></li>
+        <li class="nav-item mb-2"><a class="nav-link p-0 text-light">speñalosa@unibarranquilla.edu.co</a></li>
+      </ul>
+    </div>
+    <!-- end contactos -->
+    <!-- start redes -->
+    <ul class="list-unstyled d-flex">
+      <li class="ms-3"><a class="link-dark" href="#"><img height="50" width="50" src="../img/icon_instagram.jfif" /></a>
+      </li>
+      <li class="ms-3"><a class="link-dark" href="#"><img height="50" width="50" src="../img/icon_facebook.jfif" /></a>
+      </li>
+    </ul>
+    <!-- end redes -->
+  </footer>
+</body>
+
+<script>
+  document.getElementById("txtcontraseña").addEventListener("keydown", function (event) {
+    if (event.keyCode === 13) {
+      login();
+    }
+  })
+
+  document.getElementById("txtcorreo").addEventListener("keydown", function (event) {
+    if (event.keyCode === 13) {
+      login();
+    }
+  })
+</script>
+
+</html>
