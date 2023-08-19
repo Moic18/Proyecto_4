@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/bootstrap.css" rel="stylesheet" />
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <script src="Js/bootstrap.js"></script>
+  <script src="Js/bootstrap.min.js"></script>
+  <link rel="icon" href="img/logo.jpg">
+  <title>IUB ADMISIONES</title>
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgb(45, 166, 223)">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="Principal.html">
+          <img width="150px" src="img/logo1.png" />
+        </a>
+        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Navegación de palanca">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item mx-3">
+              <a class="nav-link fw-bold active" href="Principal.html">Inicio</a>
+            </li>
+            <li class="nav-item mx-3">
+              <a class="nav-link fw-bold" href="html/Contactenos.html">contactenos</a>
+            </li>
+            <li class="nav-item mx-3">
+              <a class="nav-link fw-bold" href="html/servicios.html">servicios</a>
+            </li>
+            <li class="nav-item mx-3">
+              <button type="button" class="fw-bold btn btn-outline-dark" data-bs-toggle="modal"
+                data-bs-target="#exampleModal">
+                Iniciar Sesion
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section>
+    <div id="carouselExampleAutoplaying" class="carousel slide mt-5" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="img/iub_bq.jpg" class="d-block mx-auto w-50">
+          <div class="carousel-caption d-none d-md-block text-light position-absolute top-0 end-60">
+            <h1>Bienvenido A Sede Barranquilla</h1>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/iub_sol.PNG" class="d-block mx-auto w-50">
+          <div class="carousel-caption d-none d-md-block text-light position-absolute top-0 end-60">
+            <h1>Bienvenido A Sede Soledad</h1>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/iub_posgrado.jpg" class="d-block mx-auto w-50">
+          <div class="carousel-caption d-none d-md-block text-dark position-absolute top-0 end-60">
+            <h1>Bienvenido A Sede Posgrado</h1>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-2 my-5">
+      <div>
+        <img src="img/chatbox.jpeg" class="card-img-top">
+      </div>
+      <div>
+        <div class="card-body">
+          <h5 class="card-title fs-1">Chat-Bot</h5>
+          <p class="card-text">Aqui te dejamos el link para el chat-box, donde podras comunicarte con el chat y te
+            contestara las
+            preguntas más frecuentes y si no puede contestarte, te pasara a un trabajador de admisiones</p>
+          <a class="fw-bold btn btn-outline-dark" href="html/chatbox.html">Ir Alla</a>
+        </div>
+      </div>
+    </div>
+
+    <form id=myform>
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content" id="login-form">
+            <div class="modal-header bg-primary">
+              <h5 class="modal-title">Inicio De Sesion</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+              <div class="mb-3">
+                <div class="mb-3">
+                  <label for="txtcorreo" class="form-label">Correo</label>
+                  <input type="text" class="form-control" id="txtcorreo" placeholder="Ingrese Correo" required>
+                </div>
+                <label for="txtcontraseña" class="form-label">ID</label>
+                <input type="password" class="form-control" id="txtcontraseña" placeholder="Ingrese Contraseña"
+                  required>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="fw-bold btn btn-outline-dark" onclick="login()">Enviar</button>
+              <button type="button" class="fw-bold btn btn-outline-dark" data-bs-dismiss="modal">volver</button>
+            </div>
+          </div>
+        </div>
+    </form>
+  </section>
+
+
+
+  <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 mt-5 mb-0 border-top bg-dark ">
+    <!-- start -->
+    <div class="col mb-3">
+      <a href="/" class="d-flex align-items-center mb-3 ">
+        <svg class="bi me-2" width="40" height="32">
+          <use xlink:href="#bootstrap"></use>
+        </svg>
+      </a>
+      <p class="text-light">copyright©/IUB</p>
+    </div>
+    <div class="col mb-3">
+    </div>
+    <!-- end -->
+    <!-- start cradores -->
+    <div class="col mb-3 text-light">
+      <h5>REALIZADO POR</h5>
+      <ul class="nav flex-column ">
+        <li class="nav-item mb-2"><a class="nav-link p-0 text-light">Moises Daniel Diaz Garcia</a></li>
+        <li class="nav-item mb-2"><a class="nav-link p-0 text-light">Samuel Peñaloza</a></li>
+        <li class="nav-item mb-2"><a class="nav-link p-0 text-light">Camilo Andres Sanchez Monsalvo</a></li>
+      </ul>
+    </div>
+    <!-- end creadores -->
+    <!-- start contactos -->
+    <div class="col mb-3 text-light">
+      <h5>CONTACTOS</h5>
+      <ul class="nav flex-column">
+        <li class="nav-item mb-2"><a class="nav-link p-0 text-light">+57 3022843231</a></li>
+        <li class="nav-item mb-2"><a class="nav-link p-0 text-light">+57 3177598755</a></li>
+        <li class="nav-item mb-2"><a class="nav-link p-0 text-light">mddiaz@unibarranquilla.edu.co</a></li>
+        <li class="nav-item mb-2"><a class="nav-link p-0 text-light">camiloasanchez@unibarranquilla.edu.co</a></li>
+        <li class="nav-item mb-2"><a class="nav-link p-0 text-light">speñalosa@unibarranquilla.edu.co</a></li>
+      </ul>
+    </div>
+    <!-- end contactos -->
+    <!-- start redes -->
+    <ul class="list-unstyled d-flex">
+      <li class="ms-3"><a class="link-dark" href="#"><img height="50" width="50" src="img/icon_instagram.jfif" /></a>
+      </li>
+      <li class="ms-3"><a class="link-dark" href="#"><img height="50" width="50" src="img/icon_facebook.jfif" /></a>
+      </li>
+    </ul>
+    <!-- end redes -->
+  </footer>
+</body>
+<script src="Js/sesion.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<!--AXIOS -->
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</html>
